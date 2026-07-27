@@ -3,8 +3,8 @@ import requests
 from datetime import datetime
 
 # LINE 設定
-LINE_TOKEN = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN")
-LINE_USER_ID = os.environ.get("LINE_USER_ID")
+LINE_TOKEN = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN", "").strip()
+LINE_USER_ID = os.environ.get("LINE_USER_ID", "").strip()
 
 
 def send_line(message):
